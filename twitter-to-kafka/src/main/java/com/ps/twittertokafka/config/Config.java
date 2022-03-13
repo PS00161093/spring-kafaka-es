@@ -11,4 +11,6 @@ import java.util.List;
 @Data
 public class Config {
     private List<String> twitterKeywords;
+
+    private String welcomeMessage;
 }

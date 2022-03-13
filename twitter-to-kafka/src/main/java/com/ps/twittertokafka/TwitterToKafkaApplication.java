@@ -27,6 +27,7 @@ public class TwitterToKafkaApplication implements CommandLineRunner {
     @Override
     public void run(String... args) {
         System.out.println("Twitter to Kafka app starts!");
+        logger.info(config.getWelcomeMessage());
         logger.info(Arrays.toString(config.getTwitterKeywords().toArray(new String[]{})));
     }
 }
