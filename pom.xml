@@ -2,6 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>twitter-to-kafka</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -10,17 +13,19 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.example</groupId>
+    <groupId>com.ms.ps</groupId>
     <artifactId>microservice-base</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>com.ps.ms</name>
-    <description>com.ps.ms</description>
+    <description>spring-kafka-microservices</description>
     <packaging>pom</packaging>
 
     <properties>
         <java.version>11</java.version>
         <spring-boot.version>2.6.4</spring-boot.version>
         <maven-compiler-plugin>3.8.1</maven-compiler-plugin>
+        <twitter4j-version>4.0.7</twitter4j-version>
+        <lombok-version>1.18.22</lombok-version>
     </properties>
 
     <dependencyManagement>
@@ -37,6 +42,20 @@
                 <version>${spring-boot.version}</version>
                 <scope>test</scope>
             </dependency>
+
+            <dependency>
+                <groupId>org.twitter4j</groupId>
+                <artifactId>twitter4j-stream</artifactId>
+                <version>${twitter4j-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok-version}</version>
+                <scope>provided</scope>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
