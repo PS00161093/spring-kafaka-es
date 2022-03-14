@@ -6,3 +6,10 @@ twitter-to-kafka-service:
     - Kafka
     - Elasticsearch
   welcome-message: Hello from twitter-to-kafka-service!
+
+retry-config:
+  initial-interval: 1000
+  max-interval: 10000
+  multiplier: 2.0
+  maxAttempts: 3
+  sleepTime: 2000

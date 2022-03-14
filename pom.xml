@@ -9,6 +9,7 @@
         <module>kafka/kafka-model</module>
         <module>kafka/kafka-admin</module>
         <module>kafka/kafka-producer</module>
+        <module>common-config</module>
     </modules>
 
     <parent>
@@ -32,6 +33,8 @@
         <twitter4j-version>4.0.7</twitter4j-version>
         <lombok-version>1.18.22</lombok-version>
         <avro-version>1.11.0</avro-version>
+        <spring-kafka-version>2.8.2</spring-kafka-version>
+        <spring-retry-version>1.3.2</spring-retry-version>
     </properties>
 
     <dependencyManagement>
@@ -67,6 +70,20 @@
                 <artifactId>avro</artifactId>
                 <version>${avro-version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.springframework.kafka</groupId>
+                <artifactId>spring-kafka</artifactId>
+                <version>${spring-kafka-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.retry</groupId>
+                <artifactId>spring-retry</artifactId>
+                <version>${spring-retry-version}</version>
+            </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 
