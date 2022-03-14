@@ -1,17 +1,19 @@
-package com.ps.twittertokafka;
+package com.ps.app.twittertokafka;
 
-import com.ps.twittertokafka.config.Config;
-import com.ps.twittertokafka.runner.StreamRunner;
+import com.ps.app.configiguration.Config;
+import com.ps.app.twittertokafka.runner.StreamRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import twitter4j.TwitterException;
 
 import java.util.Arrays;
 
 @SpringBootApplication
+@ComponentScan(basePackages = "com.ps.app")
 public class TwitterToKafkaApplication implements CommandLineRunner {
 
     private static final Logger logger = LoggerFactory.getLogger(TwitterToKafkaApplication.class);

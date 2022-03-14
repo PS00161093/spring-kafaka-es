@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>twitter-to-kafka</module>
+        <module>app-config-data</module>
     </modules>
 
     <parent>

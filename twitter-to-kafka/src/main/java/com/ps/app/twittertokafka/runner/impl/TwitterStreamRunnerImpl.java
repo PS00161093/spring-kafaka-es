@@ -1,8 +1,8 @@
-package com.ps.twittertokafka.runner.impl;
+package com.ps.app.twittertokafka.runner.impl;
 
-import com.ps.twittertokafka.config.Config;
-import com.ps.twittertokafka.listener.TweetsListener;
-import com.ps.twittertokafka.runner.StreamRunner;
+import com.ps.app.configiguration.Config;
+import com.ps.app.twittertokafka.listener.TweetsListener;
+import com.ps.app.twittertokafka.runner.StreamRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.ps.twittertokafka;
+package com.ps.app.twittertokafka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
