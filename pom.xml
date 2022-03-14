@@ -83,6 +83,11 @@
                 <version>${spring-retry-version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.ms.ps</groupId>
+                <artifactId>common-config</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
