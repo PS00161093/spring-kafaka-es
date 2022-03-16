@@ -1,6 +1,5 @@
 package com.ps.app.configuration;
 
-import com.ps.app.configiguration.RetryConfigData;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

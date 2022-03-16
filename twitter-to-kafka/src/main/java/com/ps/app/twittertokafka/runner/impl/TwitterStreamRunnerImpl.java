@@ -1,6 +1,6 @@
 package com.ps.app.twittertokafka.runner.impl;
 
-import com.ps.app.configiguration.Config;
+import com.ps.app.configuration.Config;
 import com.ps.app.twittertokafka.listener.TweetsListener;
 import com.ps.app.twittertokafka.runner.StreamRunner;
 import org.slf4j.Logger;

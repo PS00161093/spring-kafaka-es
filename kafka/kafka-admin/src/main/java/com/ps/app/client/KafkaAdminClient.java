@@ -1,7 +1,7 @@
 package com.ps.app.client;
 
-import com.ps.app.configiguration.KafkaConfigData;
-import com.ps.app.configiguration.RetryConfigData;
+import com.ps.app.configuration.KafkaConfigData;
+import com.ps.app.configuration.RetryConfigData;
 import com.ps.app.exception.KafkaClientException;
 import org.apache.kafka.clients.admin.AdminClient;
 import org.apache.kafka.clients.admin.CreateTopicsResult;
