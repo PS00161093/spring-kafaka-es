@@ -38,6 +38,21 @@
             <artifactId>twitter4j-stream</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.ms.ps</groupId>
+            <artifactId>kafka-admin</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ms.ps</groupId>
+            <artifactId>kafka-producer</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ms.ps</groupId>
+            <artifactId>common-config</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

@@ -1,6 +1,6 @@
 package com.ps.app.twittertokafka;
 
-import com.ps.app.configuration.Config;
+import com.ps.app.twittertokafka.init.StreamInitializer;
 import com.ps.app.twittertokafka.runner.StreamRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,8 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import twitter4j.TwitterException;
 
-import java.util.Arrays;
-
 @SpringBootApplication
 @ComponentScan(basePackages = "com.ps.app")
 public class TwitterToKafkaApplication implements CommandLineRunner {
@@ -20,11 +18,11 @@ public class TwitterToKafkaApplication implements CommandLineRunner {
 
     private final StreamRunner streamRunner;
 
-    private final Config config;
+    private final StreamInitializer streamInitializer;
 
-    public TwitterToKafkaApplication(StreamRunner streamRunner, Config config) {
+    public TwitterToKafkaApplication(StreamRunner streamRunner, StreamInitializer streamInitializer) {
         this.streamRunner = streamRunner;
-        this.config = config;
+        this.streamInitializer = streamInitializer;
     }
 
     public static void main(String[] args) {
@@ -34,8 +32,7 @@ public class TwitterToKafkaApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws TwitterException {
         logger.info("Twitter to Kafka app starts!");
-        logger.info(config.getWelcomeMessage());
-        logger.info(Arrays.toString(config.getTwitterKeywords().toArray(new String[]{})));
+        streamInitializer.init();
         streamRunner.start();
     }
 
