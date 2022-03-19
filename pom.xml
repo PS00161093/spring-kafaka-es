@@ -12,6 +12,7 @@
         <module>kafka/kafka-consumer</module>
         <module>common-config</module>
         <module>configuration-server</module>
+        <module>kafka-to-elastic-service</module>
     </modules>
 
     <parent>
