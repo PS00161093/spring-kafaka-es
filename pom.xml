@@ -13,6 +13,8 @@
         <module>common-config</module>
         <module>configuration-server</module>
         <module>kafka-to-elastic-service</module>
+        <module>elastic</module>
+        <module>elastic-query-service</module>
     </modules>
 
     <parent>
@@ -42,6 +44,8 @@
         <spring-cloud.version>2.2.6.RELEASE</spring-cloud.version>
         <spring-cloud-starter-config.version>3.1.1</spring-cloud-starter-config.version>
         <spring-cloud-starter-bootstrap.version>3.1.1</spring-cloud-starter-bootstrap.version>
+        <elastic.version>7.9.1</elastic.version>
+        <springdoc-openapi-ui.version>1.5.0</springdoc-openapi-ui.version>
     </properties>
 
     <repositories>
@@ -173,6 +177,26 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-bootstrap</artifactId>
                 <version>${spring-cloud-starter-bootstrap.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.microservices.demo</groupId>
+                <artifactId>elastic-model</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.microservices.demo</groupId>
+                <artifactId>elastic-config</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.microservices.demo</groupId>
+                <artifactId>elastic-index-client</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.microservices.demo</groupId>
+                <artifactId>elastic-query-client</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
