@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://Users/prashant.sharma1thoughtworks.com/Data/work/spring-kafaka-es/config-server-repo
+          clone-on-start: true
+    fail-fast: true
